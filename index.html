@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -26,7 +26,9 @@
               <li><a href="#services" data-after="Service">Skills</a></li>
               <li><a href="#projects" data-after="Projects">Projects</a></li>
               <li><a href="#about" data-after="About">About</a></li>
-              <li><a href="#sertifikat" data-after="Sertifikat">My Sertifikat</a></li>
+              <li>
+                <a href="#sertifikat" data-after="Sertifikat">My Sertifikat</a>
+              </li>
               <li><a href="#contact" data-after="Contact">Contact</a></li>
             </ul>
           </div>
@@ -122,6 +124,7 @@
           <div class="project-item">
             <div class="project-info">
               <h1>Relacom</h1>
+              <h3 class="project-year" style="color: red">2023</h3>
               <h2>Pengelolaan ruangan lab komputer</h2>
               <p>
                 Relacom adalah aplikasi manajemen ruang lab komputer yang dimana
@@ -138,6 +141,7 @@
           <div class="project-item">
             <div class="project-info">
               <h1>Rfid-app</h1>
+              <h3 class="project-year" style="color: red">2024</h3>
               <h2>Sistem absensi siswa</h2>
               <p>
                 RFID App adalah aplikasi absensi siswa berbasis IoT yang
@@ -182,52 +186,66 @@
           <button onclick="downloadFile()" class="cta">Download File</button>
 
           <script>
-          function downloadFile() {
-              fetch("file:///C:/Users/nurmi/Downloads/%E5%AD%A6%E7%94%9F%E3%81%AE%E6%97%A5%E5%B8%B8%E4%BC%9A%E8%A9%B1.pdf")
-                  .then(response => response.blob())
-                  .then(blob => {
-                      let url = window.URL.createObjectURL(blob);
-                      let a = document.createElement("a");
-                      a.href = url;
-                      a.download = "DokumenKu.pdf";
-                      document.body.appendChild(a);
-                      a.click();
-                      document.body.removeChild(a);
-                      window.URL.revokeObjectURL(url);
-                  })
-                  .catch(() => alert("Gagal mengunduh file!"));
-          }
+            function downloadFile() {
+              fetch(
+                "file:///C:/Users/nurmi/Downloads/%E5%AD%A6%E7%94%9F%E3%81%AE%E6%97%A5%E5%B8%B8%E4%BC%9A%E8%A9%B1.pdf",
+              )
+                .then((response) => response.blob())
+                .then((blob) => {
+                  let url = window.URL.createObjectURL(blob);
+                  let a = document.createElement("a");
+                  a.href = url;
+                  a.download = "DokumenKu.pdf";
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+                  window.URL.revokeObjectURL(url);
+                })
+                .catch(() => alert("Gagal mengunduh file!"));
+            }
           </script>
-          
         </div>
       </div>
     </section>
     <!-- End About Section -->
-     <section id="sertifikat">
-      <div class="sertifikat container" data-scrollreveal="enter right after 0.5s">
+    <section id="sertifikat">
+      <div
+        class="sertifikat container"
+        data-scrollreveal="enter right after 0.5s"
+      >
         <h1>My Certificate</h1>
         <div class="containers">
-          <figure><img src="img/WhatsApp Ima1ge 2025-03-03 at 10.48.43_4ff4c1e7.jpg" alt="">
-          <figcaption>
-            <br>
-            <h2>TRIAL CLASS TELKOM UNIVERSITY</h2>
-            <br>
-            Didapatkan setelah mengikuti serangkaian kegiatan TRIAL CLASS di TELKOM UNIVERSITY <br>
-            Buahbatu, Kab.bandung.
-          </figcaption>
-        </figure>
-          <figure><img src="img/WhatsApp Image 2025-03-03 at 10.52.28_0d63ffca.jpg" alt="">
-          <figcaption>
-            <br>
-            <h2>INTERNATIONAL CLASS ON SUMMER 2023</h2>
-            <br>
-            Didapatkan setelah berpartisipasi di acara INTERNATIONAL CLASS SMKS MAHAPUTRA CERDAS UTAMA. <br>
-            Kab.bandung.
-          </figcaption>
-        </figure>
+          <figure>
+            <img
+              src="img/WhatsApp Ima1ge 2025-03-03 at 10.48.43_4ff4c1e7.jpg"
+              alt=""
+            />
+            <figcaption>
+              <br />
+              <h2>TRIAL CLASS TELKOM UNIVERSITY</h2>
+              <br />
+              Didapatkan setelah mengikuti serangkaian kegiatan TRIAL CLASS di
+              TELKOM UNIVERSITY <br />
+              Buahbatu, Kab.bandung.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="img/WhatsApp Image 2025-03-03 at 10.52.28_0d63ffca.jpg"
+              alt=""
+            />
+            <figcaption>
+              <br />
+              <h2>INTERNATIONAL CLASS ON SUMMER 2023</h2>
+              <br />
+              Didapatkan setelah berpartisipasi di acara INTERNATIONAL CLASS
+              SMKS MAHAPUTRA CERDAS UTAMA. <br />
+              Kab.bandung.
+            </figcaption>
+          </figure>
         </div>
       </div>
-     </section>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact">

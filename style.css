@@ -41,6 +41,13 @@ p {
 	font-weight: 300;
 	letter-spacing: 0.05rem;
 }
+
+.project-year {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
 .section-title {
 	font-size: 4rem;
 	font-weight: 100;
